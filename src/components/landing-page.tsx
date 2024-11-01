@@ -22,6 +22,34 @@ const testimonials = [
   { name: "Mike Johnson", text: "Thanks to Dr. Christina, I now have the smile I've always wanted. Highly recommended!" },
 ]
 
+const teamMembers = [
+  { 
+    name: "Dr. Christina", 
+    role: "Lead Dentist", 
+    image: "/drchrisfp.png", 
+  },
+  { 
+    name: "Madam Cecilia Dayat", 
+    role: "Dental Assistant", 
+    image: "/cyl.png", 
+  },
+  { 
+    name: "Puan Zarina binti Zamahari", 
+    role: "Dental Assistant", 
+    image: "/ina.png", 
+  },
+  { 
+    name: "Miss Alina", 
+    role: "Dental Assistant", 
+    image: "/lina.png", 
+  },
+  { 
+    name: "Miss Jong Ai Chia", 
+    role: "Dental Assistant", 
+    image: "/jong.png", 
+  },
+]
+
 export function LandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrollY, setScrollY] = useState(0)
@@ -133,12 +161,13 @@ export function LandingPage() {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
+                className="flex justify-end"
               >
                 <Image
-                  src="/drchris.png"
+                  src="/DRChris.png"
                   alt="Dr. Christina's Dental Clinic"
-                  width={600}
-                  height={400}
+                  width={400}
+                  height={500}
                   className="rounded-lg shadow-lg"
                 />
               </motion.div>
@@ -218,6 +247,51 @@ export function LandingPage() {
           </div>
         </section>
 
+        <section className="py-24 bg-[#F2E6F2]">
+          <div className="container mx-auto px-4">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-4xl font-bold text-[#666666] mb-12 text-center"
+            >
+              Meet Our Team
+            </motion.h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {teamMembers.map((member, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <Card className="h-full hover:shadow-lg transition-all duration-300 bg-white overflow-hidden">
+                    <CardContent className="p-0">
+                      <div className="relative h-64">
+                        <Image
+                          
+                          src={member.image}
+                          alt={member.name}
+                          layout="fill"
+                          objectFit="contain"
+                        />
+                      </div>
+                      <div className="p-6">
+                        <h3 className="font-bold text-xl mb-2 text-[#666666]">{member.name}</h3>
+                        <p className="text-[#9370DB] mb-4">{member.role}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </div><div className="flex justify-center mt-12">
+              <Link href="/aboutus">
+                <Button className="bg-[#9370DB] hover:bg-[#8A2BE2] text-white px-8 py-3 rounded-full text-lg">See more</Button>
+              </Link>
+            </div>
+        </section>
+
         <section className="py-24 bg-[#E6D5E6] text-[#666666]">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -270,7 +344,6 @@ export function LandingPage() {
             <div>
               <h4 className="text-xl font-bold mb-4">Quick Links</h4>
               <ul className="space-y-2">
-                
                 <li><Link href="/" className="hover:text-[#E6D5E6] transition-colors duration-300">Home</Link></li>
                 <li><Link href="/aboutus" className="hover:text-[#E6D5E6] transition-colors duration-300">About Us</Link></li>
                 <li><Link href="/services" className="hover:text-[#E6D5E6] transition-colors duration-300">Services</Link></li>
