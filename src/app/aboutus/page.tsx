@@ -1,11 +1,11 @@
 // src/app/aboutus/page.tsx
 import React from 'react';
-import {Aboutus} from '@/components/aboutus';
+import {AboutUs} from '@/components/about-us';
 
 const AboutUsPage: React.FC = () => {
     return (
         <div>
-            <Aboutus />
+            <AboutUs />
         </div>
     );
 };

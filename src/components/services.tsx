@@ -106,7 +106,7 @@ const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, i
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
       <Card 
-        className="hover:shadow-lg transition-all duration-300 cursor-pointer overflow-hidden bg-gradient-to-br from-lavender-100 to-white h-full"
+        className="hover:shadow-lg transition-all duration-300 cursor-pointer overflow-hidden bg-gradient-to-br from-[#E6D5E6] to-white h-full"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -122,8 +122,8 @@ const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, i
                 className="w-full h-full object-cover"
               />
             ) : (
-              <div className="w-full h-full bg-lavender-200 flex items-center justify-center">
-                <h3 className="text-xl font-bold text-lavender-800 text-center px-4">{service.name}</h3>
+              <div className="w-full h-full bg-[#F2E6F2] flex items-center justify-center">
+                <h3 className="text-xl font-bold text-[#666666] text-center px-4">{service.name}</h3>
               </div>
             )}
           </div>
@@ -136,8 +136,8 @@ const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, i
                 transition={{ duration: 0.3 }}
                 className="p-4 bg-white"
               >
-                <h3 className="text-xl font-bold text-lavender-700 mb-2">{service.name}</h3>
-                <p className="text-gray-600">{service.description}</p>
+                <h3 className="text-xl font-bold text-[#666666] mb-2">{service.name}</h3>
+                <p className="text-[#666666]">{service.description}</p>
               </motion.div>
             )}
           </AnimatePresence>
@@ -157,17 +157,17 @@ export function Services() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-lavender-50 to-white font-sans">
-      <header className="bg-[#FFD09B] shadow-md fixed top-0 left-0 w-full z-50 py-4">
+    <div className="min-h-screen bg-gradient-to-b from-[#E6D5E6] via-[#F2E6F2] to-[#E6D5E6] font-sans">
+      <header className="bg-[#9370DB] shadow-md fixed top-0 left-0 w-full z-50 py-4">
         <div className="container mx-auto px-4 flex items-center justify-between">
           <Link href="/" className="flex items-center">
             <Image src="/logo.png" alt="Dr Christina's Dental Clinic Logo" width={50} height={50} />
-            <h1 className="ml-2 text-2xl font-bold text-lavender-800">Dr Christina's Dental Clinic</h1>
+            <h1 className="ml-2 text-2xl font-bold text-white">Dr Christina's Dental Clinic</h1>
           </Link>
           <nav className="hidden md:flex space-x-6">
-            <Link href="/" className="text-lavender-800 hover:text-white transition-colors duration-300">Home</Link>
-            <Link href="/aboutus" className="text-lavender-800 hover:text-white transition-colors duration-300">About Us</Link>
-            <Link href="/contact" className="text-lavender-800 hover:text-white transition-colors duration-300">Contact</Link>
+            <Link href="/" className="text-white hover:text-[#E6D5E6] transition-colors duration-300">Home</Link>
+            <Link href="/aboutus" className="text-white hover:text-[#E6D5E6] transition-colors duration-300">About Us</Link>
+            <Link href="/contact" className="text-white hover:text-[#E6D5E6] transition-colors duration-300">Contact</Link>
           </nav>
         </div>
       </header>
@@ -178,17 +178,17 @@ export function Services() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <Link href="/" className="inline-flex items-center text-lavender-800 hover:text-[#feb4b9] mb-8">
+          <Link href="/" className="inline-flex items-center text-[#666666] hover:text-[#9370DB] mb-8">
             <ArrowLeft className="mr-2" />
             Back to Home
           </Link>
           
-          <h1 className="text-4xl font-bold text-[#000000] mb-8">Our Services</h1>
+          <h1 className="text-4xl font-bold text-[#666666] mb-8">Our Services</h1>
         </motion.div>
         
         <section className="mb-12">
           <motion.h2 
-            className="text-2xl font-bold text-lavender-700 mb-4"
+            className="text-2xl font-bold text-[#666666] mb-4"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -208,10 +208,10 @@ export function Services() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <h2 className="text-2xl font-bold text-[#000000] mb-4">Treatment Fee</h2>
-          <Card className="bg-gradient-to-br from-[#f8c8b0] to-white">
+          <h2 className="text-2xl font-bold text-[#666666] mb-4">Treatment Fee</h2>
+          <Card className="bg-gradient-to-br from-[#E6D5E6] to-white">
             <CardContent className="p-6">
-              <p className="text-gray-600">
+              <p className="text-[#666666]">
                 We strive to follow the Malaysian Dental Association scale of fees. Patients can request for a quote before any procedure. However, we do not quote a fee through email.
               </p>
             </CardContent>
@@ -224,10 +224,10 @@ export function Services() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <h2 className="text-2xl font-bold text-[#000000] mb-4">Facilities</h2>
-          <Card className="bg-gradient-to-br from-lavender-100 to-white">
+          <h2 className="text-2xl font-bold text-[#666666] mb-4">Facilities</h2>
+          <Card className="bg-gradient-to-br from-[#E6D5E6] to-white">
             <CardContent className="p-6">
-              <p className="text-gray-600 mb-4">
+              <p className="text-[#666666] mb-4">
                 The moment anyone enters our clinic premise, he or she will be greeted by our warm, friendly staff and associate dentist at the reception counter and in the treatment room.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -238,8 +238,8 @@ export function Services() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
-                    <h3 className="text-xl font-bold text-lavender-700 mb-2">{title}</h3>
-                    <p className="text-gray-600 mb-4">
+                    <h3 className="text-xl font-bold text-[#666666] mb-2">{title}</h3>
+                    <p className="text-[#666666] mb-4">
                       {index === 0 && "There are two treatment rooms/ surgeries in our practice. Each has a Belmont dental chair with clean water system using Reverse Osmosis (RO) water attached. The second surgery has a wall mounted Gendex intra oral Xray unit."}
                       {index === 1 && "There is a VaTech PaxFlex 3D Xray unit in the Xray Room cum Office. It is enclosed by an 10 inches brick wall with its door and frame lead lined for prevention of radiation exposure."}
                       {index === 2 && "The Sterilisation Room is equipped with two autoclaves: Steriline B (B class autoclave) and Statim (S class autoclave), ultrasonic bath and Water Wise water distiller."}
@@ -258,7 +258,7 @@ export function Services() {
                   </motion.div>
                 ))}
               </div>
-              <p className="text-gray-600 mt-4">
+              <p className="text-[#666666] mt-4">
                 Our clinic is networked and all dental records are digitally stored for efficiency and easy retrieval. We strive to educate our patients using our dental education software to create a better awareness of their oral health and wellness.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
@@ -285,10 +285,10 @@ export function Services() {
         </motion.section>
       </main>
 
-      <footer className="bg-lavender-800 text-white py-12">
+      <footer className="bg-[#9370DB] text-white py-12">
         <div className="container mx-auto px-4 text-center">
-          <p className="mb-4">We Value Your Smile</p>
-          <p className="text-[#FFD09B]">Copyright © 2024 Dr Christina's Dental Clinic. All Rights Reserved.</p>
+          <p className="mb-4">We Value Your  Smile</p>
+          <p className="text-[#E6D5E6]">Copyright © 2024 Dr Christina's Dental Clinic. All Rights Reserved.</p>
         </div>
       </footer>
     </div>

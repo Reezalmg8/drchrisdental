@@ -10,10 +10,10 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 const services = [
-  { name: "Consultation", description: "Comprehensive dental check-ups and treatment planning.", image: "/dental.png" },
-  { name: "X-ray Imaging", description: "Advanced diagnostic imaging for accurate treatment.", image: "/dental-x-ray.png" },
-  { name: "Restorations/Fillings", description: "High-quality dental fillings to restore tooth function.", image: "/dental-veneer.png" },
-  { name: "Crowns and Bridges", description: "Custom-made crowns and bridges for damaged teeth.", image: "/dental-crowns.png" },
+  { name: "Restorative Dentistry", description: "3D Guided Implants, Crown & Bridge, Root Canal Treatment", image: "/dental-veneer.png" },
+  { name: "Cosmetic Dentistry", description: "Clear Aligners, Metal Braces, Teeth Whitening, Veneers", image: "/dental-crowns.png" },
+  { name: "Preventive Care", description: "Regular check-ups and cleanings to maintain oral health", image: "/dental.png" },
+  { name: "Dentures", description: "Custom-fitted dentures for a natural-looking smile", image: "/dental-x-ray.png" },
 ]
 
 const testimonials = [
@@ -33,18 +33,18 @@ export function LandingPage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-[#FFF7D1] font-sans">
+    <div className="min-h-screen bg-gradient-to-b from-[#E6D5E6] via-[#F2E6F2] to-[#E6D5E6] font-sans">
       <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrollY > 0 ? 'bg-white shadow-md' : 'bg-transparent'}`}>
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center">
             <Image src="/logo.png" alt="Dr Christina's Dental Clinic Logo" width={50} height={50} />
-            <h1 className="ml-2 text-2xl font-bold text-[#000000]">Dr Christina's Dental Clinic</h1>
+            <h1 className="ml-2 text-2xl font-bold text-[#666666]">Dr Christina's Dental Clinic</h1>
           </Link>
           <nav className="hidden md:flex space-x-6 items-center">
-            <Link href="/" className="text-[#000000] hover:text-[#FFB0B0] transition-colors duration-300">Home</Link>
-            <Link href="/aboutus" className="text-[#000000] hover:text-[#FFB0B0] transition-colors duration-300">About Us</Link>
-            <Link href="/services" className="text-[#000000] hover:text-[#FFB0B0] transition-colors duration-300">Services</Link>
-            <Link href="/contact" className="text-[#000000] hover:text-[#FFB0B0] transition-colors duration-300">Contact</Link>
+            <Link href="/" className="text-[#666666] hover:text-[#9370DB] transition-colors duration-300">Home</Link>
+            <Link href="/aboutus" className="text-[#666666] hover:text-[#9370DB] transition-colors duration-300">About Us</Link>
+            <Link href="/services" className="text-[#666666] hover:text-[#9370DB] transition-colors duration-300">Services</Link>
+            <Link href="/contact" className="text-[#666666] hover:text-[#9370DB] transition-colors duration-300">Contact</Link>
           </nav>
           <div className="md:hidden">
             <Button
@@ -67,12 +67,10 @@ export function LandingPage() {
               className="md:hidden bg-white shadow-lg"
             >
               <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-                <Link href="/" className="text-[#FFD09B] hover:text-[#FFB0B0] transition-colors duration-300">Home</Link>
-                <Link href="/aboutus" className="text-[#000000
-                ] hover:text-[#
-                ] transition-colors duration-300">About Us</Link>
-                <Link href="/services" className="text-[#FFD09B] hover:text-[#FFB0B0] transition-colors duration-300">Services</Link>
-                <Link href="/contact" className="text-[#FFD09B] hover:text-[#FFB0B0] transition-colors duration-300">Contact</Link>
+                <Link href="/" className="text-[#666666] hover:text-[#9370DB] transition-colors duration-300">Home</Link>
+                <Link href="/aboutus" className="text-[#666666] hover:text-[#9370DB] transition-colors duration-300">About Us</Link>
+                <Link href="/services" className="text-[#666666] hover:text-[#9370DB] transition-colors duration-300">Services</Link>
+                <Link href="/contact" className="text-[#666666] hover:text-[#9370DB] transition-colors duration-300">Contact</Link>
               </div>
             </motion.div>
           )}
@@ -100,18 +98,17 @@ export function LandingPage() {
             >
               <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">We Value Your Smile</h2>
               <p className="text-xl md:text-2xl text-white mb-8">Expert dental care in a warm, family-friendly environment</p>
-              
             </motion.div>
           </div>
         </section>
 
-        <section className="py-24 bg-[#FFECC8]">
+        <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl font-bold text-[#000000] mb-12 text-center"
+              className="text-4xl font-bold text-[#666666] mb-12 text-center"
             >
               About Us
             </motion.h2>
@@ -121,15 +118,15 @@ export function LandingPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <h3 className="text-2xl font-bold text-[#000000] mb-4">Our Story</h3>
-                <p className="text-[#000000] mb-4">
-                  Dr. Christina's Dental Clinic was established on June 6, 2006. What started as a small practice has grown into a trusted family dental clinic, known for our commitment to gentle, comprehensive care for patients of all ages.
+                <h3 className="text-2xl font-bold text-[#666666] mb-4">Our Story</h3>
+                <p className="text-[#666666] mb-4">
+                  Dr. Christina's Dental Clinic was established with a vision to provide comprehensive, compassionate dental care for families in our community. Over the years, we've grown and evolved, but our commitment to excellence and patient-centered care remains unchanged.
                 </p>
-                <p className="text-[#000000] mb-4">
-                  Dr. Chris, as she is fondly known, brings with her a wealth of experience and a passion for creating healthy smiles. With expertise in various fields including Orthodontics and Implant Dentistry, Dr. Chris ensures that every member of your family receives top-notch care tailored to their needs.
+                <p className="text-[#666666] mb-4">
+                  Dr. Christina, as she is fondly known, brings with her a wealth of experience and a passion for creating healthy smiles. With expertise in various fields including Restorative and Cosmetic Dentistry, Dr. Christina ensures that every patient receives top-notch care tailored to their needs.
                 </p>
                 <Link href="/aboutus">
-                  <Button className="bg-[#000000] hover:bg-[#FFD09B] text-white px-6 py-2 rounded-full">Learn More</Button>
+                  <Button className="bg-[#9370DB] hover:bg-[#8A2BE2] text-white px-6 py-2 rounded-full">Learn More</Button>
                 </Link>
               </motion.div>
               <motion.div
@@ -149,13 +146,13 @@ export function LandingPage() {
           </div>
         </section>
 
-        <section className="py-24 bg-[#FFF7D1]">
+        <section className="py-24 bg-[#F2E6F2]">
           <div className="container mx-auto px-4">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl font-bold text-[#000000] mb-12 text-center"
+              className="text-4xl font-bold text-[#666666] mb-12 text-center"
             >
               Our Services
             </motion.h2>
@@ -176,8 +173,8 @@ export function LandingPage() {
                         height={80}
                         className="mb-4"
                       />
-                      <h3 className="font-bold text-xl mb-2 text-[#000000]">{service.name}</h3>
-                      <p className="font-bold text-[#FFB0B0] text-center">{service.description}</p>
+                      <h3 className="font-bold text-xl mb-2 text-[#666666]">{service.name}</h3>
+                      <p className="text-[#9370DB] text-center">{service.description}</p>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -185,19 +182,19 @@ export function LandingPage() {
             </div>
             <div className="flex justify-center mt-12">
               <Link href="/services">
-                <Button className="bg-[#000000] hover:bg-[#FFD09B] text-white px-8 py-3 rounded-full text-lg">View All Services</Button>
+                <Button className="bg-[#9370DB] hover:bg-[#8A2BE2] text-white px-8 py-3 rounded-full text-lg">View All Services</Button>
               </Link>
             </div>
           </div>
         </section>
 
-        <section className="py-24 bg-[#FFFFFF]">
+        <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl font-bold text-[#000000] mb-12 text-center"
+              className="text-4xl font-bold text-[#666666] mb-12 text-center"
             >
               Testimonials
             </motion.h2>
@@ -209,10 +206,10 @@ export function LandingPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <Card className="h-full bg-white">
+                  <Card className="h-full bg-[#F2E6F2]">
                     <CardContent className="p-6">
-                      <p className="text-[#000000] mb-4">"{testimonial.text}"</p>
-                      <p className="font-bold text-[#FFB0B0]">- {testimonial.name}</p>
+                      <p className="text-[#666666] mb-4">"{testimonial.text}"</p>
+                      <p className="font-bold text-[#9370DB]">- {testimonial.name}</p>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -221,7 +218,7 @@ export function LandingPage() {
           </div>
         </section>
 
-        <section className="py-24 bg-[#FFECC8] text-black">
+        <section className="py-24 bg-[#E6D5E6] text-[#666666]">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <motion.div
@@ -232,7 +229,7 @@ export function LandingPage() {
                 <h2 className="text-4xl font-bold mb-6">Ready to Schedule Your Visit?</h2>
                 <p className="text-xl mb-8">Our team is here to provide you with the best dental care. Book your appointment today!</p>
                 <Link href="/contact">
-                  <Button className="bg-white text-[#FFECC8] hover:bg-[#FFECC8] px-8 py-3 rounded-full text-lg">Contact Us</Button>
+                  <Button className="bg-[#9370DB] hover:bg-[#8A2BE2] text-white px-8 py-3 rounded-full text-lg">Contact Us</Button>
                 </Link>
               </motion.div>
               <motion.div
@@ -242,19 +239,19 @@ export function LandingPage() {
                 className="grid grid-cols-2 gap-4"
               >
                 <div className="flex items-center">
-                  <Clock className="mr-2" />
+                  <Clock className="mr-2 text-[#9370DB]" />
                   <p>Mon-Fri: 8am-5pm</p>
                 </div>
                 <div className="flex items-center">
-                  <Clock className="mr-2" />
+                  <Clock className="mr-2 text-[#9370DB]" />
                   <p>Sat: 9am-2pm</p>
                 </div>
                 <div className="flex items-center">
-                  <MapPin className="mr-2" />
+                  <MapPin className="mr-2 text-[#9370DB]" />
                   <p>Kuching, Sarawak</p>
                 </div>
                 <div className="flex items-center">
-                  <Phone className="mr-2" />
+                  <Phone className="mr-2 text-[#9370DB]" />
                   <p>+6082-452505</p>
                 </div>
               </motion.div>
@@ -263,36 +260,36 @@ export function LandingPage() {
         </section>
       </main>
 
-      <footer className="bg-[#FFD09B] text-black py-12">
+      <footer className="bg-[#9370DB] text-white py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-2xl font-bold mb-4">Dr Christina's Dental Clinic</h3>
-              <p>Creating beautiful smiles since 1995</p>
+              <p>Creating beautiful smiles since 2006</p>
             </div>
             <div>
               <h4 className="text-xl font-bold mb-4">Quick Links</h4>
               <ul className="space-y-2">
                 
-                <li><Link href="/" className="hover:text-[#FFB0B0] transition-colors duration-300">Home</Link></li>
-                <li><Link href="/aboutus" className="hover:text-[#FFB0B0] transition-colors duration-300">About Us</Link></li>
-                <li><Link href="/services" className="hover:text-[#FFB0B0] transition-colors duration-300">Services</Link></li>
-                <li><Link href="/contact" className="hover:text-[#FFB0B0] transition-colors duration-300">Contact</Link></li>
+                <li><Link href="/" className="hover:text-[#E6D5E6] transition-colors duration-300">Home</Link></li>
+                <li><Link href="/aboutus" className="hover:text-[#E6D5E6] transition-colors duration-300">About Us</Link></li>
+                <li><Link href="/services" className="hover:text-[#E6D5E6] transition-colors duration-300">Services</Link></li>
+                <li><Link href="/contact" className="hover:text-[#E6D5E6] transition-colors duration-300">Contact</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="text-xl font-bold mb-4">Connect With Us</h4>
               <div className="flex space-x-4">
-                <a href="https://facebook.com" className="text-black hover:text-[#FFB0B0] transition-colors duration-300">
+                <a href="https://facebook.com" className="text-white hover:text-[#E6D5E6] transition-colors duration-300">
                   <Facebook size={24} />
                 </a>
-                <a href="https://www.instagram.com/drchristina.dentalclinic/" className="text-black hover:text-[#FFB0B0] transition-colors duration-300">
+                <a href="https://www.instagram.com/drchristina.dentalclinic/" className="text-white hover:text-[#E6D5E6] transition-colors duration-300">
                   <Instagram size={24} />
                 </a>
               </div>
             </div>
           </div>
-          <div className="mt-8 pt-8 border-t border-[#FFECC8] text-center">
+          <div className="mt-8 pt-8 border-t border-[#E6D5E6] text-center">
             <p>Copyright © 2024 Dr Christina's Dental Clinic. All Rights Reserved.</p>
           </div>
         </div>
